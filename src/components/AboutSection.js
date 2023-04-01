@@ -4,7 +4,7 @@ const AboutSection = () => {
 
         <section id="about" className="section-padding" data-aos="fade-up">
             <div className="container">
-                <div className="row mb-5">
+                <div className="row mb-5 ">
                     <div className="col-12 text-center">
                         <div className="section-title">
                             <h1 className="display-3 mb-4">About Us</h1>
@@ -15,11 +15,11 @@ const AboutSection = () => {
                     </div>
                 </div>
                 <div className="row align-items-center justify-content-between">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-sm-12" >
                         <div className="about-img"></div>
                     </div>
 
-                    <div className="col-5">
+                    <div className="col-lg-5 col-sm-12">
 
                         <div className="about-body mt-2">
                             <h1 className="display-3 mb-2">ABOUT BRAND</h1>

@@ -5,8 +5,8 @@ const Footer = () => {
         <footer>
             <div className="footer-top p-5">
                 <div className="container">
-                    <div className="row gy-5 justify-content-center ">
-                        <div className="col-3">
+                    <div className="row gy-5 justify-content-center text-center text-lg-start text-md-start ">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <a className="navbar-brand " href="#">BRAND <span>.</span></a>
                             <p className="mt-4"> brands we love to crafit degital expperiances for brands brands we love to
                                 crafit degital expperiances for brands</p>
@@ -18,9 +18,9 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <h5>SERVICES</h5>
-                            <div className="line"></div>
+                            <div className="line "></div>
                             <ul className="">
                                 <li>
                                     <a href="">UI Designer</a>
@@ -38,7 +38,7 @@ const Footer = () => {
 
                             </ul>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <h5>ABOUT</h5>
                             <div className="line"></div>
                             <ul className="">
@@ -58,7 +58,7 @@ const Footer = () => {
 
                             </ul>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <h5>CONTACT</h5>
                             <div className="line"></div>
                             <ul className="">
@@ -83,11 +83,11 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="container">
-                    <div className="row justify-content-between align-items-center g-4">
-                        <div className="col-auto ">
+                    <div className="row justify-content-between align-items-center g-4  text-center text-lg-start">
+                        <div className="col-md-auto col-sm-12">
                             <p className="mb-0"> @Copyright Brand All Rights Reserved</p>
                         </div>
-                        <div className="col-auto ">
+                        <div className="col-md-auto col-sm-12">
                             <p className="mb-0">Desined By Name</p>
 
                         </div>
