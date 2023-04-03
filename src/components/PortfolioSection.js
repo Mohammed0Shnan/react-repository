@@ -13,37 +13,47 @@ const PortolioSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="row gx-5">
+                    <div className="col-lg-3 col-md-6 col-sm-12">
                         <div className="portfolio-card mb-5">
                             <div className="image-zoom">
-                                <div className='portfolio-img bg-cover'></div>
+                                <div className='portfolio-img '></div>
                             </div>
                             <div className="icon-box">
 
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-3 col-md-6 col-sm-12">
                         <div className="portfolio-card mb-5">
                             <div className="image-zoom">
-                                <div className='portfolio-img bg-cover'></div>
+                                <div className='portfolio-img '></div>
                             </div>
                             <div className="icon-box">
 
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-3 col-md-6 col-sm-12">
                         <div className="portfolio-card mb-5">
                             <div className="image-zoom">
-                                <div className='portfolio-img bg-cover'></div>
+                                <div className='portfolio-img '></div>
                             </div>
                             <div className="icon-box">
 
                             </div>
                         </div>
                     </div>
+                    <div className="col-lg-3 col-md-6 col-sm-12">
+                        <div className="portfolio-card mb-5">
+                            <div className="image-zoom">
+                                <div className='portfolio-img'></div>
+                            </div>
+                            <div className="icon-box">
+
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </section>

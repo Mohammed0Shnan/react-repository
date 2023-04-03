@@ -9,16 +9,14 @@ import PortolioSection from './components/PortfolioSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ServiceDetails } from './components/ServiceDetails';
 import { Route, Router, Routes } from 'react-router-dom';
 import SocialLinks from './components/SocialLinks';
 import ParticalesBackground from './components/ParticalesBackground';
-
+import React from 'react';
 
 const queryClient = new QueryClient
 
 function App() {
-
   return (
     <div>
       <ParticalesBackground />
@@ -26,7 +24,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Root />} ></Route>
-          <Route path='/service-details/:serviceId' element={<ServiceDetails />} ></Route>
+       
         </Routes>
       </QueryClientProvider>
     </div>
