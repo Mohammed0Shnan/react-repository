@@ -13,6 +13,7 @@ import { Route, Router, Routes } from 'react-router-dom';
 import SocialLinks from './components/SocialLinks';
 import ParticalesBackground from './components/ParticalesBackground';
 import React from 'react';
+import { ServiceDetails } from './components/ServiceDetails';
 
 const queryClient = new QueryClient
 
@@ -24,7 +25,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Root />} ></Route>
-       
+          <Route path='/service-details/:serviceId' element={<ServiceDetails />} ></Route>
         </Routes>
       </QueryClientProvider>
     </div>

@@ -1,34 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import Modal from 'react-bootstrap/Modal';
+import localdata from '../data/services';
+import { Link } from 'react-router-dom';
+import Aos from 'aos';
+
 const ServicesSection = () => {
-    const [modalShow, setModalShow] = React.useState(false);
-
-    function MyVerticallyCenteredModal(props) {
-        return (
-            <div className='modal-dialog'>
-                <Modal
-                    {...props}
-                    size="md"
-                    aria-labelledby="contained-modal-title-vcenter"
-                    centered>
-                    <Modal.Body>
-                        <h4>Centered Modal</h4>
-                        <p>
-                        {props.message}
-                        </p>
-                    </Modal.Body>
-                    <Modal.Footer >
-                        <a className='btn' onClick={props.onHide} ><h6>Close</h6></a>
-                    </Modal.Footer>
-                </Modal>
-            </div>
-
-        );
-    }
 
 
+    useEffect(() => {
+        Aos.init();
+    }, []);
     const onSuccess = (data) => {
         console.log('Success Call Back', data)
     }
@@ -56,69 +38,13 @@ const ServicesSection = () => {
         return (<h2>{error.message}</h2>);
 
 
-    const localdata = [
-        {
-            id: 1,
-            title: 'Websites and online stores',
-            description: 'At Creative Agency, we have long experience in server systems, websites hosting, and programming languages, so we offer you what is right for your business',
-            img: 'comp.png'
-        },
-        {
-            id: 2,
-            title: 'Mobile applications Design and development(android and Iphone)',
-            description: 'ddsdescription',
-            img: 'mobile .png'
-        },
-
-        {
-            id: 3,
-            title: 'SMS Marketing',
-            description: 'ddsdescription',
-            img: 'sms .png'
-        },
-        {
-            id: 4,
-            title: 'Identity designing (logo branding)',
-            description: 'ddsdescription',
-            img: 'comp.png'
-        },
-        {
-            id: 5,
-            title: 'SM Management & ADS Campaign',
-            description: 'ddsdescription',
-            img: 'ads.png'
-        },
-        {
-            id: 6,
-            title: 'Printing',
-            description: 'ddsdescription',
-            img: 'print.png'
-        },
-        {
-            id: 7,
-            title: 'Packaging products (Paperbags - carton Boxes)',
-            description: 'ddsdescription',
-            img: 'carton.png'
-        },
-        {
-            id: 8,
-            title: 'Gift item',
-            description: 'ddsdescription',
-            img: 'gift 2.png'
-        },
-        {
-            id: 9,
-            title: 'Uniform',
-            description: 'ddsdescription',
-            img: 'T .png'
-        },
-    ]
+    const servicesdata = localdata;
 
 
     return (
-        <section id="services" className="section-padding border-top " data-aos="zoom-in">
+        <section id="services" className="section-padding border-top " >
             <div className="container">
-                <div className="row mb-5 ">
+                <div className="row mb-5  " data-aos="zoom-in">
                     <div className="col-12 text-center">
                         <div className="services-title">
                             <h1 className="display-3 mb-4">Services</h1>
@@ -129,9 +55,9 @@ const ServicesSection = () => {
                 </div>
                 <div className="row gy-5">
                     {
-                        localdata.map(service => {
-                            return <div className="col-lg-4 col-md-6 col-sm-12">
-                                <button  onClick={() => setModalShow(true )} >
+                        servicesdata.map(service => {
+                            return <div className="col-lg-4 col-md-6 col-sm-12" data-aos="zoom-in"  data-aos-duration="700">
+                                <Link style={{textDecoration: 'none',color:'black' }} to={`/service-details/${service.id}`} >
                                     <div className="service-card ">
                                         <div className="wrapper">
                                             <img src={require('../img/' + service.img)} />
@@ -142,20 +68,17 @@ const ServicesSection = () => {
                                             </div>
                                         </div>
                                     </div>
-           
-                                </button>
-                                <MyVerticallyCenteredModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-                message='kkkkkkkkkkkkkkkkkkkkk'
-            />
+
+                                </Link>
+
                             </div>
                         })
                     }
+                
 
                 </div>
             </div>
-         
+
         </section>
 
 
